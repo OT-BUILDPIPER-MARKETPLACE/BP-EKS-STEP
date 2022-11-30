@@ -3,7 +3,7 @@ I'll setup EKS
 
 
 ## Setup
-* Clone the code available at [BP-TF-STEP](https://github.com/OT-BUILDPIPER-MARKETPLACE/BP-EKS-STEP)
+* Clone the code available at [BP-EKS-STEP](https://github.com/OT-BUILDPIPER-MARKETPLACE/BP-EKS-STEP)
 * Build the docker image
 
 ```
