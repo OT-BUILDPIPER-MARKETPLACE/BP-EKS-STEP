@@ -1,7 +1,7 @@
 locals {
-  vpc_id             = var.vpc_id
-  eks_subnets        = var.eks_subnets
-  subnets            = var.subnets
+  vpc_id             = "${var.vpc_id}"
+  eks_subnets        = "${var.eks_subnets}"
+  subnets            = "${var.subnets}"
 }
 
 module "eks" {
