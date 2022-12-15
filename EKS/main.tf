@@ -2,6 +2,7 @@ locals {
   vpc_id             = var.vpc_id
   eks_subnets        = var.eks_subnets
   subnets            = var.subnets
+  node_sg            = var.node_sg
 }
 
 module "eks" {
@@ -22,7 +23,7 @@ module "eks" {
     "worker1" = {
       subnets            = local.subnets
       ssh_key            = var.ssh_key
-      security_group_ids = var.node_sg
+      security_group_ids = local.node_sg
       instance_type      = var.instance_type
       desired_capacity   = var.desired_capacity
       disk_size          = var.disk_size
@@ -35,7 +36,7 @@ module "eks" {
     "worker2" = {
       subnets            = local.subnets
       ssh_key            = var.ssh_key
-      security_group_ids = var.node_sg
+      security_group_ids = local.node_sg
       instance_type      = var.instance_type
       desired_capacity   = var.desired_capacity
       disk_size          = var.disk_size
